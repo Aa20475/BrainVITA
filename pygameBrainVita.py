@@ -168,9 +168,8 @@ def GAME_OVER(holestat,det):
 		else:
 			gg.append(False)			
 	if len(set(gg)) == 1 and gg[0]==False and selected==False:
-		return True
-	else:
-		return False
+	    return True
+	return False
 
 def close_detect(array,radius):
 	neightbours = []
