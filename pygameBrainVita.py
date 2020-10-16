@@ -160,7 +160,7 @@ def GAME_OVER(holestat,det):
 		if holestat[x]==1:	
 			for i in range(4):
 			 	#True>>Possible #False>>Not Possible
-				if det[x][i]!=None and det[det[x][i]][i]!=None:
+				if det[x][i] is not None and det[det[x][i]][i] is not None:
 					if (holestat[det[x][i]]==1 and holestat[det[det[x][i]][i]]==0):
 						gg.append(True)
 					else:
@@ -255,7 +255,7 @@ while not done:
 					bp,bd,p_new = nearest_search(pos,holepos)
 					if bd<calc_rad(size,7):
 						for i in range(4):
-							if det[p_loc][i]!=None:
+							if det[p_loc][i] is not None:
 								for j in range(4):
 									if det[det[p_loc][i]][j] == p_new and i==j and holestat[det[p_loc][i]]!=0 and holestat[p_new]!=1:
 										there = True
